@@ -10,17 +10,17 @@
 
 </head>
 <body>
+    <div class="top">
+        <p><a href="#">마음 성장 플랫폼, 플레이라이프</a></p>
+        <p class="close"><a href="#"><img src="images/icon_banner_close.svg" alt="close"></a></p> 
+    </div>
     <div class="logo">
-        <p><img src="images/playlife_logo_black.png" alt="logo"></p>
+        <p><a href=""><img src="images/playlife_logo_black.png" alt="logo"></a></p>
         <ul>
             <li></li>
             <li></li>
             <li></li>
         </ul>
-    </div>
-    <div class="top">
-        <p><a href="#">마음 성장 플랫폼, 플레이라이프</a></p>
-        <p class="close"><a href="#"><img src="images/icon_banner_close.svg" alt="close"></a></p> 
     </div>
     <div class="menu">
         <p><img src="images/black_X.svg" alt="black_X"></p>
@@ -305,6 +305,7 @@
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script>
     let slide = document.querySelectorAll(".swiper-slide");
       slide[0].classList.add("bg-01");
@@ -330,6 +331,27 @@
           },
         }
       
+    });
+
+    $(function(){
+        let txt = true; 
+      $(".menu>p").click(function(){
+        if(txt){
+          $(".menu").animate({width:"59.375%"},500,"linear");  
+        }else{
+            $(".menu").animate({width:"0"},500,"linear");   
+        }
+        txt = !txt;
+         });
+         $(".logo>ul").click(function(){
+            if(txt){
+          $(".menu").animate({width:"59.375%"},500,"linear");  
+        }else{
+            $(".menu").animate({width:"0"},500,"linear");   
+        }
+        txt = !txt;
+         })
+            
     });
 </script>
 </body>
